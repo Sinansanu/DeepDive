@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepDive Dashboard</title>
+    <link rel="stylesheet" href="../components/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">D</span>
+          <div>
+            <strong>DeepDive</strong>
+            <small>Research Assistant</small>
+          </div>
+        </div>
+        <nav>
+          <a href="../pages/index.html">Research</a>
+          <a class="active" href="../dashboard/index.html">Dashboard</a>
+        </nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <h1>Saved reports</h1>
+            <p>Review previous research runs and search the local memory index.</p>
+          </div>
+        </header>
+
+        <section class="dashboard-grid">
+          <section class="panel">
+            <div class="section-head">
+              <h2>Research memory</h2>
+              <button id="memoryButton" class="secondary">Search</button>
+            </div>
+            <input id="memoryQuery" placeholder="Search saved source memory" />
+            <div id="memoryResults" class="stack"></div>
+          </section>
+
+          <section class="panel">
+            <div class="section-head">
+              <h2>Reports</h2>
+              <button id="refreshReports" class="secondary">Refresh</button>
+            </div>
+            <div id="reportList" class="stack"></div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="../components/dashboard.js"></script>
+  </body>
+</html>

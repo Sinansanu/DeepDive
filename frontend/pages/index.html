@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DeepDive</title>
+    <link rel="stylesheet" href="../components/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark">D</span>
+          <div>
+            <strong>DeepDive</strong>
+            <small>Research Assistant</small>
+          </div>
+        </div>
+        <nav>
+          <a class="active" href="../pages/index.html">Research</a>
+          <a href="../dashboard/index.html">Dashboard</a>
+        </nav>
+      </aside>
+
+      <section class="workspace">
+        <header class="topbar">
+          <div>
+            <h1>Research workspace</h1>
+            <p>Collect sources, extract the important parts, and turn them into an organized report.</p>
+          </div>
+          <button id="healthButton" class="icon-button" title="Check service">↻</button>
+        </header>
+
+        <section class="research-grid">
+          <form id="researchForm" class="panel">
+            <label>
+              Topic
+              <input id="query" name="query" placeholder="AI agents in enterprise search" required />
+            </label>
+            <label>
+              Source URLs <span class="optional">optional</span>
+              <textarea
+                id="urls"
+                name="urls"
+                rows="8"
+                placeholder="Leave blank to search automatically, or paste URLs here.&#10;https://example.com/article-one"
+              ></textarea>
+            </label>
+            <button class="primary" type="submit">Generate report</button>
+            <p id="status" class="status">Ready.</p>
+          </form>
+
+          <article id="report" class="report panel">
+            <div class="empty-state">
+              <h2>No report yet</h2>
+              <p>Add a topic and source URLs to create a summarized research brief.</p>
+            </div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="../components/app.js"></script>
+  </body>
+</html>

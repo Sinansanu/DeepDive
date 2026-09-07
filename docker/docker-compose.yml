@@ -1,0 +1,10 @@
+services:
+  deepdive:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../vector_store:/app/vector_store
+      - ../backend/database:/app/backend/database
